@@ -5,6 +5,6 @@ int main(){
   int a;
   printf("Enter a number : ");
   scanf("%d",&a);
-  (a>0)?printf("%d is non-zero",a):(a == 0)?printf("%d is Zero",a):printf("%d is non-zero");
+  (a>0)?printf("%d is non-zero",a):(a == 0)?printf("%d is Zero",a):printf("%d is non-zero",a);
   return 0;
 }
