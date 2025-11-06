@@ -1,4 +1,4 @@
-//Write a program in c to check number in positive or negative or zero using nested ternary oparator:
+//Write a program in c to check number is positive or negative or zero using nested ternary oparator:
 #include <stdio.h>
 
 int main(){
