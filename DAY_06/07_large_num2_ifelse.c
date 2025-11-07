@@ -6,14 +6,17 @@ int main()
   int a, b, c;
   printf("Enter three number : ");
   scanf("%d %d %d", &a, &b, &c);
-  if  (a>b && a>c){
-    printf("%d is the large number",a);
+  if (a > b && a > c)
+  {
+    printf("%d is the large number", a);
   }
-  else if(b>a && b>c){
-    printf("%d is the large number",b);
+  else if (b > a && b > c)
+  {
+    printf("%d is the large number", b);
   }
-  else  {
-    printf("%d is the large number",c);
+  else
+  {
+    printf("%d is the large number", c);
   }
   return 0;
 }
