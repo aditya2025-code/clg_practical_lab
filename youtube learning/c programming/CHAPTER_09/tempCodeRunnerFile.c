@@ -1,0 +1,1 @@
+  printf("%d %s %f\n",e2.code,e2.name,e2.salary);  
