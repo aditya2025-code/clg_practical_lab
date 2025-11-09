@@ -12,13 +12,13 @@ int main()
   scanf("%d", &choise);
   if (choise == 1)
   {
-    ci = (p * r * t) / 100;
-    printf("Simple interest is %2.f", ci);
+    si = (p * r * t) / 100;
+    printf("Simple interest is %2.f", si);
   }
   else if (choise == 2)
   {
-    si = (p * pow((1 + r / 100), t)) - p;
-    printf("Compound inerest is %2.f", si);
+    ci = (p * pow((1 + r / 100), t)) - p;
+    printf("Compound inerest is %2.f", ci);
   }
   else
   {
