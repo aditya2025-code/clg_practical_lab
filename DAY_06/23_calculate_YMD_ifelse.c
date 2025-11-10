@@ -19,16 +19,15 @@ int main()
   }
   else if (d >= 30)
   {
-    y = 0;
     m = d / 30;
     d = d % 30;
-    printf("%d Year %d Month %d Day",y,m,d);
+    printf("%d Month %d Day",m,d);
   }
   else
   {
     y = 0;
     m = 0;
-    printf("%d Year %d Month %d Day",y,m,d);
+    printf("The remaining Day is %d",d);
   }
   return 0;
 }
