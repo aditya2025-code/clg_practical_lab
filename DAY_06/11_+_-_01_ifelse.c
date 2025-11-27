@@ -1,4 +1,4 @@
-// Write a program in c to check number is positive or negative or zero using nested ifelse:
+// Write a program in c to check number is positive or negative or zero using nested ifelse type 1:
 #include <stdio.h>
 
 int main()
