@@ -13,10 +13,10 @@ int main()
   switch(choise)
   {
     case 1 : si = (p * r * t) / 100;
-    printf("Simple interest is %2.f", si);
+    printf("Simple interest is %.2f", si);
     break;
     case 2 : ci = (p * pow((1 + r / 100), t)) - p;
-    printf("Compound inerest is %2.f", ci);
+    printf("Compound interest is %.2f", ci);
     break;
     default: printf("Please choise 1 or 2");
     break;

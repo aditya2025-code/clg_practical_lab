@@ -6,7 +6,7 @@
 void main()
 {
   int a, b, c;
-  float area, s;
+  float area, h;
 
   printf("Enter 3 side : ");
   scanf("%d %d %d", &a, &b, &c);
@@ -22,14 +22,14 @@ void main()
     switch ((a == b) || (b == c) || (a == c))
     {
     case 1:
-      s = (a + b + c) / 2.0;
-      area = sqrt(s * (s - a) * (s - b) * (s - c));
+      h = (a + b + c) / 2.0;
+      area = sqrt(h * (h - a) * (h - b) * (h - c));
       printf("The area of Isosceles triangle is %.2f", area);
       break;
 
     case 0:
-      s = (a + b + c) / 2.0;
-      area = sqrt(s * (s - a) * (s - b) * (s - c));
+      h = (a + b + c) / 2.0;
+      area = sqrt(h * (h - a) * (h - b) * (h - c));
       printf("The area of Scalene triangle is %.2f", area);
       break;
     }
