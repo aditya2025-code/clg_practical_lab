@@ -17,7 +17,7 @@ int main()
       printf("%d is the smallest Number", c);
     }
   }
-  else if (b < a)
+  else
   {
     if (b < c)
     {
@@ -27,10 +27,5 @@ int main()
     {
       printf("%d is the smallest Number", c);
     }
+    return 0;
   }
-  else
-  {
-    printf("%d is the smallest Number", c);
-  }
-  return 0;
-}
