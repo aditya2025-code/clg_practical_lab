@@ -1,4 +1,4 @@
-// Write a program in c to check year is leap year or not using if-else ladder:
+// Write a program in c to check year is leap year or not using nested if-else type 2:
 #include <stdio.h>
 void main()
 {
@@ -7,18 +7,24 @@ void main()
   scanf("%d", &a);
   if (a % 400 == 0)
   {
-    printf("%d is leap Year", a);
-  }
-  else if (a % 100 == 0)
-  {
-    printf("%d is not leap Year", a);
-  }
-  else if (a % 4 == 0)
-  {
-    printf("%d is leap Year", a);
+    printf("%d year is a leap year", a);
   }
   else
   {
-    printf("%d is not leap Year", a);
+    if (a % 4 == 0)
+    {
+      if (a % 100 == 0)
+      {
+        printf("%d year is a not leap year", a);
+      }
+      else
+      {
+        printf("%d year is a leap year", a);
+      }
+    }
+    else
+    {
+      printf("%d year is not a leap year", a);
+    }
   }
 }

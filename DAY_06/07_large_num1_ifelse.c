@@ -1,4 +1,4 @@
-// Write a program in c to check large number among 3 number using nested if-else:
+// Write a program in c to check large number among 3 number using nested if-else :
 #include <stdio.h>
 
 int main()
@@ -17,7 +17,7 @@ int main()
       printf("%d is the Large Number", c);
     }
   }
-  else if (b > a)
+  else
   {
     if (b > c)
     {
@@ -27,10 +27,6 @@ int main()
     {
       printf("%d is the Large Number", c);
     }
-  }
-  else
-  {
-    printf("%d is the Large Number", c);
   }
   return 0;
 }
