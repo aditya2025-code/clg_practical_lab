@@ -14,7 +14,7 @@ void main()
     {
       printf("+%d", i);
       fflush(stdout);
-      Sleep(300);
+      Sleep(400);
     }
   }
   printf(" = %d", a);
