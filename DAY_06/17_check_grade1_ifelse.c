@@ -62,3 +62,10 @@ int main()
   printf("Your Grade = %c", grade);
   return 0;
 }
+//OUTPUT:
+/*
+Enter the Biology , English , Physic , Chemestry and Math marks (side by side)
+79 89 69 79 99
+Your average is 83
+Your Grade = E
+*/

@@ -24,3 +24,8 @@ int main()
   }
   return 0;
 }
+//OUTPUT:
+/*
+Enter a number : 0
+0 is Zero
+*/

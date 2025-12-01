@@ -29,3 +29,8 @@ void main()
     }
   }
 }
+//OUTPUT:
+/*
+Enter a number: 25
+25 is buzz
+*/

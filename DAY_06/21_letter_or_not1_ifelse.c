@@ -16,3 +16,13 @@ int main(){
   }
   return 0;
 }
+//OUTPUT1:
+/*
+Enter a character: $
+$ is not a letter
+*/
+//OUTPUT2:
+/*
+Enter a character: L
+L is a letter
+*/

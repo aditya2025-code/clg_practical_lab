@@ -29,3 +29,9 @@ int main()
     }
     return 0;
   }
+}
+//OUTPUT:
+/*
+Enter three number : 3 1 2
+1 is the smallest Number
+*/

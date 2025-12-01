@@ -28,3 +28,8 @@ void main()
     printf("%d is not a leap year", a);
   }
 }
+//OUTPUT:
+/*
+Enter a year : 2025
+2025 is not a leap year
+*/

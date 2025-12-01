@@ -22,3 +22,8 @@ void main()
     printf("%d is not leap Year", a);
   }
 }
+//OUTPUT:
+/*
+Enter a year : 2100
+2100 is not leap Year
+*/

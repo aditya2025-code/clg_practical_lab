@@ -21,3 +21,8 @@ int main(){
   
   return 0;
 }
+//OUTPUT:
+/*
+Enter a character: S
+S is a letter
+*/

@@ -20,3 +20,8 @@ int main()
   }
   return 0;
 }
+//OUTPUT:
+/*
+Enter three number : 231 123 321
+123 is the small number
+*/

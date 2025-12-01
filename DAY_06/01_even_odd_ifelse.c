@@ -14,3 +14,8 @@ void main()
     printf("%d is an odd number", a);
   }
 }
+//OUTPUT:
+/*
+Enter a number : 69
+69 is an odd number
+*/

@@ -28,3 +28,8 @@ void main()
     }
   }
 }
+//OUTPUT:
+/*
+Enter a year : 2224
+2224 year is a leap year
+*/

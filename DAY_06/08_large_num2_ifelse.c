@@ -20,3 +20,8 @@ int main()
   }
   return 0;
 }
+//OUTPUT:
+/*
+Enter three number : 16 54 98
+98 is the large number
+*/

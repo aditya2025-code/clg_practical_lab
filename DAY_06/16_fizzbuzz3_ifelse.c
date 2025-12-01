@@ -23,3 +23,8 @@ void main()
     printf("%d is not Fizz,Buzz or FizzBuzz", a);
   }
 }
+//OUTPUT:
+/*
+Enter a number: 27
+27 is Fizz
+*/

@@ -23,3 +23,8 @@ int main(){
   }
   return 0;
 }
+//OUTPUT:
+/*
+Enter a character: i
+i is a letter
+*/

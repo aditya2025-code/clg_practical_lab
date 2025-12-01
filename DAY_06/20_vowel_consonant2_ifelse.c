@@ -33,3 +33,8 @@ int main()
   }
   return 0;
 }
+//OUTPUT:
+/*
+Enter a alphabet: I
+I is a vowel
+*/

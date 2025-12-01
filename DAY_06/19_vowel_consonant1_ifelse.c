@@ -45,3 +45,8 @@ int main()
   }
   return 0;
 }
+//OUTPUT:
+/*
+Enter a alphabet: U
+U is a vowel
+*/

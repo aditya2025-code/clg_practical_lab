@@ -14,3 +14,8 @@ void main()
     printf("%d is non-Zero", a);
   }
 }
+//OUTPUT:
+/*
+Enter a number : 10
+10 is non-Zero
+*/

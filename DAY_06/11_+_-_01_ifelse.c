@@ -23,3 +23,8 @@ int main()
   }
   return 0;
 }
+//OUTPUT:
+/*
+Enter a number : 7
+7 is positive number
+*/

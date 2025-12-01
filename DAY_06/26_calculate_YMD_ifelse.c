@@ -31,3 +31,8 @@ int main()
   }
   return 0;
 }
+//OUTPUT:
+/*
+Enter total number of days: 7000
+19 Year 2 Month 5 Day
+*/
