@@ -13,3 +13,9 @@ int main()
   printf("%d | %d = %u", a, b, a | b);
   return 0;
 }
+//OUTPUT:
+/*
+Enter the numbers 5 10
+5 & 10 = 0
+5 | 10 = 15
+*/

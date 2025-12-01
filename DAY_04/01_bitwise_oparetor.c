@@ -14,3 +14,14 @@ int main(){
   printf("%d >> %d = %d",a,b,a>>b);
   return 0;
 }
+//OUTPUT:
+/*
+Enter two number : 7 5
+7 & 5 = 5
+7 | 5 = 7
+~ 7 = -8
+~ 5 = -6
+7 ^ 5 = 2
+7 << 5 = 224
+7 >> 5 = 0
+*/
