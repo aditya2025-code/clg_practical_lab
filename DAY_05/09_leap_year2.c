@@ -7,3 +7,8 @@ void main()
   scanf("%d", &a);
   (a % 400 == 0) ? printf("%d is Leap Year", a) : (a % 4 == 0) ? (a % 100 != 0) ? printf("%d is Leap Year", a) : printf("%d is not Leap Year", a): printf("%d is not Leap Year", a);
 }
+//OUTPUT:
+/*
+Enter a year : 2028
+2028 is Leap Year
+*/

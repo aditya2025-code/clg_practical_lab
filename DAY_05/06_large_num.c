@@ -8,3 +8,8 @@ int main(){
   (a>b)?(a>c)?printf("%d is Large number",a):printf("%d is large number",c):(b>c)?printf("%d is large number",b):printf("%d is large number",c);
   return 0;
 }
+//OUTPUT:
+/*
+Enter three number : 99 88 77
+99 is Large number
+*/

@@ -15,3 +15,14 @@ int main()
   printf("The value of a is %d", a);
   return 0;
 }
+//OUTPUT:
+/*
+Enter a and b value : 100 10
+The value of a is 100
+a+=b is 110
+a-=b is 100
+a*=b is 1000
+a/=b is 100
+a%=b is 0
+The value of a is 0
+*/

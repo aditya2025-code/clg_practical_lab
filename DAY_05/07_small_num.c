@@ -8,3 +8,8 @@ int main(){
   (a<b)?(a<c)?printf("%d is smallest number",a):printf("%d is smallest number",c):(b<c)?printf("%d is smallest number",b):printf("%d is smallest number",c);
   return 0;
 }
+//OUTPUT:
+/*
+Enter three number : 9 7 8
+7 is smallest number
+*/

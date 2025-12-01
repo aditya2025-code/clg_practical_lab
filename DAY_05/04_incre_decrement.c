@@ -15,3 +15,16 @@ int main(){
   printf("The final value of a is %d",a);
   return 0;
 }
+//OUTPUT:
+/*
+Enter a number : 50
+The value of a is 50
+The value of a++ is 50
+The value of a is 51
+The value of ++a is 52
+The value of a is 52
+The value of a-- is 52
+The value of a is 51
+The value of --a is 50
+The final value of a is 50
+*/

@@ -8,3 +8,8 @@ int main(){
   (a>0)?printf("%d is positive",a):(a == 0)?printf("%d is Zero",a):printf("%d is negetive",a);
   return 0;
 }
+//OUTPUT:
+/*
+Enter a number : 0
+0 is Zero
+*/
