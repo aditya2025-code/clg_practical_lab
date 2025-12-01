@@ -26,3 +26,14 @@ int main()
   }
   return 0;
 }
+
+//OUTPUT1:
+/*
+Enter number then oparatpor then number : 5 / 2
+5.00 / 2.00 = 2.50
+*/
+//OUTPUT2:
+/*
+Enter number then oparatpor then number : 18 * 2
+18.00 * 2.00 = 36.00
+*/

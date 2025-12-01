@@ -36,3 +36,9 @@ void main()
     break;
   }
 }
+
+//OUTPUT:
+/*
+Enter 3 side : 7 8 9
+The area of Scalene triangle is 26.83
+*/

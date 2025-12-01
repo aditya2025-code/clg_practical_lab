@@ -24,3 +24,9 @@ int main()
   }
   return 0;
 }
+
+//OUTPUT:
+/*
+Enter a alphabate : i
+VOWEL
+*/

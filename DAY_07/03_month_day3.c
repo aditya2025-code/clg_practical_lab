@@ -49,3 +49,9 @@ int main()
   }
   return 0;
 }
+
+//OUTPUT:
+/*
+Enter the day (1-30): 13
+13 is Thursday
+*/

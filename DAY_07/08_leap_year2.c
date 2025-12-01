@@ -23,3 +23,9 @@ void main()
     break;
   }
 }
+
+//OUTPUT:
+/*
+Enter a year : 2024
+2024 year is a leap year
+*/

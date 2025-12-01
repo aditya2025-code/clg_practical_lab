@@ -32,3 +32,9 @@ int main()
 
   return 0;
 }
+
+//OUTPUT:
+/*
+Enter three numbers: 10 20 30
+Largest number is 30
+*/

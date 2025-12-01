@@ -44,3 +44,13 @@ int main()
   }
   return 0;
 }
+//OUTPUT1:
+/*
+Enter the day: 20
+20 is Thursday
+*/
+//OUTPUT2:
+/*
+Enter the day: 200
+You entered invalid Day
+*/

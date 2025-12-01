@@ -23,3 +23,12 @@ int main()
   }
   return 0;
 }
+
+//OUTPUT:
+/*
+Enter Principal, Rate and Time: 20000 7.5 10
+Enter 1 for simple interest
+Enter 2 for compound interest
+2
+Compound interest is 21220.65
+*/

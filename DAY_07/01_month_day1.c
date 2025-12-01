@@ -63,3 +63,8 @@ int main()
 
   return 0;
 }
+//OUTPUT:
+/*
+Enter the day: 30
+30 is Sunday
+*/
