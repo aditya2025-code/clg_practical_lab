@@ -14,3 +14,8 @@ int main()
   printf("Area of the square is %d", area);
   return 0;
 }
+//OUTPUT:
+/*
+Enter the side length of a Square 6
+Area of the square is 36
+*/

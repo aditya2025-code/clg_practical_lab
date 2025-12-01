@@ -15,3 +15,8 @@ int main()
 
   return 0;
 }
+//OUTPUT:
+/*
+Enter the tempreture in fehrenheit 108
+The tempreture of 108.00 fehrenheit to celsius is 42.22
+*/

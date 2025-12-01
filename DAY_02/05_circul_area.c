@@ -15,3 +15,8 @@ int main()
 
   return 0;
 }
+//OUTPUT:
+/*
+Enter the circul redius 7
+The area of circul is 153.91
+*/

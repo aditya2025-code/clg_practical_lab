@@ -19,3 +19,10 @@ int main()
 
   return 0;
 }
+//OUTPUT:
+/*
+Enter the equale side length 7
+Enter the other side length 9
+The height of Isosceles triangle is 5.36
+The area of Isosceles triangle is 24.13
+*/

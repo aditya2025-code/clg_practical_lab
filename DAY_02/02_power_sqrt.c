@@ -18,4 +18,10 @@ int main()
 
   return 0;
 }
-
+//OUTPUT:
+/*
+Enter the base and exponent 50 5
+The power of 50.000000 and 5.000000 is 312500000.000000,
+The square root of 50.000000 is 7.071068,
+The square root of 5.000000 is 2.236068
+*/

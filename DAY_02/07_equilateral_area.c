@@ -17,3 +17,8 @@ int main()
 
   return 0;
 }
+//OUTPUT:
+/*
+Enter the length 5
+The area of Equilateral triangle is 10.83
+*/

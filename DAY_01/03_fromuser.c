@@ -15,3 +15,12 @@ int main()
   printf("The float number is %.2f",b);
   return 0;
 }
+//OUTPUT:
+/*
+Enter the character i
+Enter the integer number 7
+Enter the float number 1.91
+The character is i
+The integer number is 7
+The float number is 1.91
+*/

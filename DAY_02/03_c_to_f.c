@@ -15,3 +15,8 @@ int main()
 
   return 0;
 }
+//OUTPUT:
+/*
+Enter the tempreture in celsius 32
+The tempreture of 32.00 celsius to ferhenhite is 89.60
+*/
