@@ -1,3 +1,4 @@
+//WRITE A PROGRAM TO TRANSPOS A MATRIX:
 #include <stdio.h>
 
 int main()

@@ -1,3 +1,4 @@
+//WRITE A PROGRAM TO TRANSPOS A MATRIX INTO B MATRIX:
 #include <stdio.h>
 
 int main()
