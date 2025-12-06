@@ -1,4 +1,4 @@
-// Write program in c to display subtraction of two matrix:
+// Write program in c to display multiplication of two matrix:
 #include <stdio.h>
 void main()
 {
