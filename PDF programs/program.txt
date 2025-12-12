@@ -1,0 +1,208 @@
+-------------List of C Programs-------------
+
+1.	Sum of first N natural numbers
+Write a C program to input a positive integer n and find the sum 1 + 2 + … + n using a loop.
+
+2.	Sum of even numbers up to N
+Write a C program to input n and find the sum of all even numbers from 1 to n using a loop.
+
+3.	Factorial of a number
+Write a C program to input an integer n and find n! using a loop (without recursion).
+
+4.	Table of a number
+Write a C program to read an integer and print its multiplication table from 1 to 10 using a loop.
+
+5.	Reverse counting
+Write a C program to print numbers from n down to 1 using a while loop.
+
+6.	Digits count
+Write a C program to count the number of digits in a given integer using a loop.
+
+7.	Sum of digits
+Write a C program to find the sum of digits of a given number using a loop.
+
+8.	Reverse a number
+Write a C program to reverse a given integer (e.g., 1234 → 4321) using a loop.
+
+9.	Palindrome number check
+Using a loop, write a C program to check whether a given integer is a palindrome or not.
+
+10.	Armstrong number check (3-digit)
+Write a C program using loops to check whether a 3-digit number is an Armstrong number (sum of cubes of digits equals the number).
+
+11.	Power using repeated multiplication
+Write a C program to compute a^b (a to the power b) using a loop (without using pow()).
+
+12.	Print all even numbers between two numbers
+Write a C program to input two integers low and high and print all even numbers between them using a loop.
+
+13.	Print all odd numbers between two numbers
+Similar to above, but print all odd numbers between low and high using a loop.
+
+14.	Prime number check
+Write a C program to check whether a given number is prime or not using a loop.
+
+15.	Print all primes in a range
+Write a C program that uses loops to print all prime numbers between 1 and n.
+
+16.	Fibonacci series (first N terms)
+Write a C program to print the first n Fibonacci numbers using a loop.
+
+17.	Fibonacci series up to a limit
+Write a C program to print all Fibonacci numbers less than or equal to a given number n using a loop.
+
+18.	LCM using repeated addition / loop
+Write a C program to find the LCM of two numbers using loops (by checking multiples).
+
+19.	GCD using repeated subtraction / loop
+Write a C program to find the GCD of two numbers using loops (Euclidean algorithm with while).
+
+20.	Menu-driven calculator using loop
+Write a C program that repeatedly asks the user to choose an operation (+, -, *, /) and two numbers, performs the operation, and continues until the user chooses to exit (use a loop).
+
+21.	Sum of series: 1 + 1/2 + 1/3 + … + 1/n
+Write a C program using a loop to compute the sum of the harmonic series up to n terms (use float or double).
+
+22.	Print characters A–Z using loop
+Write a C program to print all uppercase letters from ‘A’ to ‘Z’ using a loop.
+
+23.	Count vowels in a string (using loop)
+Write a C program to input a string and count the number of vowels using a loop (no string library iteration functions).
+
+24.	Count spaces and digits in a string
+Write a C program that reads a line of text and uses a loop to count spaces, digits, and other characters.
+
+25.	Sum of elements in an array using loop
+Write a C program to input n elements in an array and find their sum using a loop.
+
+26.	Maximum element in an array (loop)
+Write a C program to read n integers into an array and find the maximum value using a loop.
+
+27.	Linear search using loop
+Write a C program to perform linear search in an array using a loop and indicate whether the element is found or not.
+
+28.	Frequency of a given element in an array
+Write a C program to count how many times a particular element appears in an array using a loop.
+
+29.	Reverse an array using loop
+Write a C program that reads an array of n integers and prints the array elements in reverse order using a loop.
+
+30.	Bubble sort using nested loops
+Write a C program to sort an array of integers using the bubble sort algorithm (nested loops).
+
+31.	Pattern 1: Right-angled triangle of stars
+For input n, print the following pattern using nested loops:
+*
+* *
+* * *
+… (n rows)
+
+32.	Pattern 2: Inverted right-angled triangle
+For input n, print the pattern using nested loops:
+* * * *
+* * *
+* *
+*
+
+33.	Pattern 3: Floyd’s triangle (1, 2, 3, …)
+For input n, print Floyd’s triangle using nested loops:
+1
+2 3
+4 5 6
+… Up to N terms 
+
+34.	Pattern 4: Number triangle
+For input n, print:
+1
+1 2
+1 2 3
+… up to n rows using loops.
+
+35.	Pattern 5: Pyramid of stars
+For input n, print a pyramid (center-aligned) using nested loops, e.g., for n=3:
+*
+* *
+* * *
+
+36.	Sum of even and odd elements separately
+Write a C program to read n integers and use a loop to compute the sum of even elements and the sum of odd elements separately.
+
+37.	Count positive, negative, zero numbers
+Read n integers and use a loop to count how many are positive, negative, and zero.
+
+38.	Read until -1 and compute average
+Write a C program that repeatedly reads integers from the user until -1 is entered, then prints the average of all numbers (excluding -1) using a loop.
+
+39.	Guessing game with limited attempts
+Write a C program that generates / assumes a secret number and allows the user at most 5 attempts to guess it, using a loop.
+
+40.	Check if a number is perfect
+A number is perfect if the sum of its proper divisors equals the number (e.g., 6 = 1+2+3). Write a C program using a loop to check if a number is perfect.
+
+41.	Print all perfect numbers in a range
+Using loops (nested), print all perfect numbers between 1 and n.
+
+42.	Count the occurrence of each digit in a number
+Write a C program that uses loops to count how many times each digit (0–9) appears in a given integer.
+
+43.	Convert decimal to binary (using loop)
+Write a C program using loops to convert a decimal number to its binary representation and print it.
+
+44.	Print digits of a number in words
+Using loops and switch-case, write a C program that prints each digit of a number in words (e.g., 120 → ONE TWO ZERO).
+
+45.	Check if a number is strong number
+A strong number is one whose sum of factorial of digits equals the number (e.g., 145 = 1! + 4! + 5!). Write a C program using loops to check this.
+
+46.	Sum of series: 1² + 2² + 3² + … + n²
+Write a C program to find the sum of squares of first n natural numbers using a loop.
+
+47.	Sum of series: 1³ + 2³ + 3³ + … + n³
+Write a C program to find the sum of cubes of first n natural numbers using a loop.
+
+48.	Print all factors of a number
+Write a C program using a loop to print all the factors of a given number.
+
+49.	Check if a number is composite
+Write a C program using loops to check if a given number is composite (non-prime and > 1) and print its smallest factor (other than 1).
+
+50.	Do-while menu for repeated input
+Write a C program using a do-while loop to repeatedly display a menu with options (e.g., “1. Enter number 2. Print square 3. Exit”) and perform the selected operation until the user chooses to exit
+
+51.	Write a C program to print the following right-angled triangle of numbers for a given n:
+	1
+	1 2
+	1 2 3
+	1 2 3 4
+	------ n terms
+
+52.	Write a C program to print the following pattern of repeated row numbers for a given n:
+	1
+	2 2
+	3 3 3
+	4 4 4 4
+	------- n terms
+
+53.	Write a C program to print the following pyramid pattern of stars (centre aligned) for a given n:
+	   *
+	  * *
+	 * * *
+	* * * *
+
+54.	Write a C program to print the following inverted pyramid pattern of stars for a given n:
+	* * * *
+	 * * *
+	  * *
+	   *
+
+55.	Write a C program to print the following diamond pattern of stars for a given odd number n (height):
+	   *
+	  * *
+	 * * *
+	  * *
+	   *
+
+
+
+
+
