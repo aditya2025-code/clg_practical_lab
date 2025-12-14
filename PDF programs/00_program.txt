@@ -120,9 +120,9 @@ For input n, print:
 
 35.	Pattern 5: Pyramid of stars
 For input n, print a pyramid (center-aligned) using nested loops, e.g., for n=3:
-*
-* *
-* * *
+   *
+ * * *
+* * * *
 
 36.	Sum of even and odd elements separately
 Write a C program to read n integers and use a loop to compute the sum of even elements and the sum of odd elements separately.
