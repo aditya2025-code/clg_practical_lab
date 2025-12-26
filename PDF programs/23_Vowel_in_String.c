@@ -36,6 +36,7 @@ int main()
 }
 // OUTPUT:
 /*
-Total vowels are 4
-Total consonant are 5
+Enter any Word: Aditya
+Total vowels are 3
+Total consonant are 3
 */
