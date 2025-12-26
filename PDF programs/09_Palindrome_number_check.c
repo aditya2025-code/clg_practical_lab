@@ -16,9 +16,9 @@ void main()
     n /= 10;
   }
   if (copy == store)
-    printf("%d is Palindrome Number", store);
+    printf("%d is Palindrome Number", copy);
   else
-    printf("%d is not Palindrome Number", store);
+    printf("%d is not Palindrome Number", copy);
 }
 // OUTPUT:
 /*
