@@ -7,19 +7,39 @@ Write a C program to print all Fibonacci numbers less than or equal to a given n
 int main()
 {
   int i, n;
-  double a = 0, b = 1, c = 0;
+  double a = 0, b = 1, c = 0, a1, b1, c1;
+  a1 = a + b;
+  b1 = b + a1;
+  c1 = a1 + b1;
   printf("Enter the Range: ");
   scanf("%d", &n);
-  printf("%d Fibonacci are %.0lf %.0lf", n, a, b);
-  for (i = 3; i <= n; i++)
+  if (n > 3)
   {
-    c = a + b;
-    if (c >= n)
-      break;
-    printf(" %.0lf", c);
-    a = b;
-    b = c;
+    printf("%d Fibonacci are %.0lf %.0lf", n, a, b);
+    for (i = 1; i <= n; i++)
+    {
+      c = a + b;
+      if (c > n)
+        break;
+      printf(" %.0lf", c);
+      a = b;
+      b = c;
+    }
   }
+  else if (n == 3)
+  {
+    printf("%d Fibonacci are %.0lf %.0lf %.0lf %.0lf %.0lf", n, a, b, a1, b1, c1);
+  }
+  else if (n == 2)
+  {
+    printf("%d Fibonacci are %.0lf %.0lf %.0lf %.0lf", n, a, b, a1, b1);
+  }
+  else if (n == 1)
+  {
+    printf("%d Fibonacci are %.0lf %.0lf %.0lf", n, a, b, a1);
+  }
+  else
+    printf("Only enter positive integer");
   return 0;
 }
 // OUTPUT:
