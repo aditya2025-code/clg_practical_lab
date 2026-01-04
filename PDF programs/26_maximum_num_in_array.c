@@ -5,14 +5,17 @@ Write a C program to read n integers into an array and find the maximum value us
 #include <stdio.h>
 int main()
 {
-  int a[5], max;
-  printf("Enter 5 number: ");
-  for (int i = 0; i < 5; i++)
+  int n;
+  printf("Enter array size: ");
+  scanf("%d", &n);
+  int a[n], max;
+  printf("Enter %d number: ",n);
+  for (int i = 0; i < n; i++)
   {
     scanf("%d", &a[i]);
   }
   max = a[0];
-  for (int i = 1; i < 5; i++)
+  for (int i = 1; i < n; i++)
   {
     if (max < a[i])
       max = a[i];
@@ -22,6 +25,7 @@ int main()
 }
 // OUTPUT:
 /*
+Enter array size: 5
 Enter 5 number: 111 222 333 444 555
 MAXIMUM ELEMENT= 555
 */

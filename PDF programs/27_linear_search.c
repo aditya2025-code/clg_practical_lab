@@ -6,15 +6,18 @@ Write a C program to perform linear search in an array using a loop and indicate
 
 int main()
 {
-  int a[10], search;
-  printf("Enter 10 numbers: ");
-  for (int i = 0; i < 10; i++)
+  int n;
+  printf("Enter array size: ");
+  scanf("%d", &n);
+  int a[n], search;
+  printf("Enter %d numbers: ", n);
+  for (int i = 0; i < n; i++)
   {
     scanf("%d", &a[i]);
   }
   printf("\nNow enter the searching element: ");
   scanf("%d", &search);
-  for (int i = 0; i < 10; i++)
+  for (int i = 0; i < n; i++)
   {
     if (search == a[i])
       printf("%d is found at index %d\n", search, i);
@@ -23,6 +26,7 @@ int main()
 }
 // OUTPUT:
 /*
+Enter array size: 10
 Enter 10 numbers: 1 2 3 4 5 5 6 5 7 5
 
 Now enter the searching element: 5

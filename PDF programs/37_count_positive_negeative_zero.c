@@ -6,9 +6,12 @@ Read n integers and use a loop to count how many are positive, negative, and zer
 
 int main()
 {
-  int a[10], count_pos = 0, count_neg = 0, count_zero = 0;
-  printf("Enter 10 number: ");
-  for (int i = 0; i < 10; i++)
+  int n;
+  printf("Enter array size: ");
+  scanf("%d", &n);
+  int a[n], count_pos = 0, count_neg = 0, count_zero = 0;
+  printf("Enter %d number: ", n);
+  for (int i = 0; i < n; i++)
   {
     scanf("%d", &a[i]);
     if (a[i] > 0)
@@ -23,6 +26,7 @@ int main()
 }
 // OUTPUT:
 /*
+Enter array size: 10
 Enter 10 number: 2 -8 0 9 -4 7 0 -5 55 -7
 POSITIVE = 4
 NEGATIVE = 4

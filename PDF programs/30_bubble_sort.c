@@ -6,13 +6,16 @@ Write a C program to sort an array of integers using the bubble sort algorithm (
 
 int main()
 {
-  int a[5], swap;
-  printf("Enter 5 number: ");
-  for (int i = 0; i < 5; i++)
+  int n;
+  printf("Enter array size: ");
+  scanf("%d", &n);
+  int a[n], swap;
+  printf("Enter %d number: ",n);
+  for (int i = 0; i < n; i++)
     scanf("%d", &a[i]);
   printf("Ascending order = ");
 
-  for (int i = 0; i < 5; i++)
+  for (int i = 0; i < n; i++)
   {
     for (int j = 0; j < i + 1; j++)
     {
@@ -24,7 +27,7 @@ int main()
       }
     }
   }
-  for (int i = 0; i < 5; i++)
+  for (int i = 0; i < n; i++)
   {
     printf("%d ", a[i]);
   }
@@ -32,6 +35,7 @@ int main()
 }
 // OUTPUT:
 /*
-Enter 5 number: 5 6 7 2 9
-Ascending order = 2 5 6 7 9
+Enter array size: 6
+Enter 6 number: 5 6 7 0 2 9
+Ascending order = 0 2 5 6 7 9
 */

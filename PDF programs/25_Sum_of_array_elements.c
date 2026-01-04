@@ -6,9 +6,12 @@ Write a C program to input n elements in an array and find their sum using a loo
 
 int main()
 {
-  int a[7], sum = 0;
-  printf("Enter 7 numbers: ");
-  for (int i = 0; i < 7; i++)
+  int n;
+  printf("Enter array size: ");
+  scanf("%d", &n);
+  int a[n], sum = 0;
+  printf("Enter %d numbers: ", n);
+  for (int i = 0; i < n; i++)
   {
     scanf("%d", &a[i]);
     sum += a[i];
@@ -18,6 +21,7 @@ int main()
 }
 // OUTPUT:
 /*
+Enter array size: 7
 Enter 7 numbers: 2 2 2 2 2 2 2
 SUM = 14
 */
