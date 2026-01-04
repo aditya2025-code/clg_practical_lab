@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - C Programming</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --accent: #6366f1;
+            --accent-hover: #4f46e5;
+            --card-bg: #ffffff;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --border: rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            --bg-secondary: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --accent: #818cf8;
+            --accent-hover: #6366f1;
+            --card-bg: rgba(30, 41, 59, 0.8);
+            --shadow: rgba(0, 0, 0, 0.3);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            transition: all 0.4s ease;
+        }
+
+        [data-theme="dark"] body {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: slideDown 0.8s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(20deg); }
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            animation: fadeIn 1s ease 0.3s both;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px var(--shadow);
+            z-index: 1000;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(180deg);
+            box-shadow: 0 6px 20px var(--shadow);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            animation: slideRight 0.6s ease;
+        }
+
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .breadcrumb-item {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .breadcrumb-item:hover {
+            color: var(--accent);
+            transform: translateX(3px);
+        }
+
+        .breadcrumb-item.active {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .breadcrumb-separator {
+            color: var(--text-secondary);
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            animation: slideRight 0.6s ease;
+        }
+
+        .back-button:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateX(-5px);
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .folder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .folder-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            animation: scaleIn 0.5s ease both;
+        }
+
+        .folder-card:nth-child(1) { animation-delay: 0.1s; }
+        .folder-card:nth-child(2) { animation-delay: 0.2s; }
+        .folder-card:nth-child(3) { animation-delay: 0.3s; }
+        .folder-card:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .folder-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .folder-card:hover::before {
+            left: 100%;
+        }
+
+        .folder-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px var(--shadow);
+            border-color: var(--accent);
+        }
+
+        .folder-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .folder-card:hover .folder-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .folder-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .folder-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .image-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .image-item {
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: slideUp 0.5s ease both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-item:nth-child(odd) { animation-delay: 0.1s; }
+        .image-item:nth-child(even) { animation-delay: 0.2s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .image-item::after {
+            content: '→';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: var(--accent);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .image-item:hover {
+            transform: translateX(10px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+
+        .image-item:hover::after {
+            opacity: 1;
+            right: 30px;
+        }
+
+        .image-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            animation: zoomIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+        }
+
+        .lightbox-title {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+            animation: fadeIn 0.6s ease;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .about-section {
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .about-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .about-content {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 40px 20px;
+            background: var(--card-bg);
+            border-top: 2px solid var(--border);
+            animation: slideUp 0.8s ease;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+        }
+
+        .footer-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .footer-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            margin: 10px 0;
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-link:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .folder-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .theme-toggle {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+
+            .lightbox-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .about-section {
+                padding: 20px;
+            }
+
+            .about-title {
+                font-size: 1.5rem;
+            }
+
+            footer {
+                padding: 30px 15px;
+            }
+
+            .footer-content {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle">☀️</button>
+    
+    <div class="container" id="app"></div>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">×</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+        <div class="lightbox-content">
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            <div class="lightbox-title" id="lightboxTitle"></div>
+        </div>
+    </div>
+
+    <script>
+        // ====================================================================
+        // 📝 WEBSITE INFORMATION - Edit your details here
+        // ====================================================================
+        const siteInfo = {
+            authorName: 'Aditya Das',  // ← Change this to your name
+            lastUpdated: 'January 5, 2026', // ← Update this date when you add new content
+            aboutText: 'This is a comprehensive collection of C programming resources designed to help students master fundamental programming concepts and data structures. The materials include lab programs, PDF references, question banks, and detailed implementations to support your learning journey.' // ← Customize your about text
+        };
+        // ====================================================================
+
+        // ====================================================================
+        // 📁 ADD YOUR IMAGES HERE - Edit this section to add your images
+        // ====================================================================
+        const imageData = {
+            // Lab Programs - Day wise
+            'basic-c/lab/day-1': [
+                { title: 'Program 1 - Display Your Name', url: 'images/lab/DAY_01/01_displayname.jpg' },
+                { title: 'Program 2 - Datatypes', url: 'images/lab/DAY_01/code-2.jpg' },
+                { title: 'Program 2 - Run Time Input', url: 'images/lab/DAY_01/code-3.jpg' },
+                // Add more Day 1 programs here
+            ],
+            'basic-c/lab/day-2': [
+                { title: 'Day 2 - Program 1', url: 'path/to/day2-prog1.jpg' },
+                { title: 'Day 2 - Program 2', url: 'path/to/day2-prog2.jpg' },
+                // Add more Day 2 programs here
+            ],
+            'basic-c/lab/day-3': [
+                { title: 'Day 3 - Program 1', url: 'path/to/day3-prog1.jpg' },
+                { title: 'Day 3 - Program 2', url: 'path/to/day3-prog2.jpg' },
+                // Add more Day 3 programs here
+            ],
+            'basic-c/lab/day-4': [
+                { title: 'Day 4 - Program 1', url: 'path/to/day4-prog1.jpg' },
+                { title: 'Day 4 - Program 2', url: 'path/to/day4-prog2.jpg' },
+                // Add more Day 4 programs here
+            ],
+            'basic-c/lab/day-5': [
+                { title: 'Day 5 - Program 1', url: 'path/to/day5-prog1.jpg' },
+                { title: 'Day 5 - Program 2', url: 'path/to/day5-prog2.jpg' },
+                // Add more Day 5 programs here
+            ],
+            'basic-c/lab/day-6': [
+                { title: 'Day 6 - Program 1', url: 'path/to/day6-prog1.jpg' },
+                { title: 'Day 6 - Program 2', url: 'path/to/day6-prog2.jpg' },
+                // Add more Day 6 programs here
+            ],
+            'basic-c/lab/day-7': [
+                { title: 'Day 7 - Program 1', url: 'path/to/day7-prog1.jpg' },
+                { title: 'Day 7 - Program 2', url: 'path/to/day7-prog2.jpg' },
+                // Add more Day 7 programs here
+            ],
+            
+            // PDF Programs
+            'basic-c/pdf': [
+                { title: 'PDF Program 1 - Input Output', url: 'path/to/pdf1.jpg' },
+                { title: 'PDF Program 2 - Functions', url: 'path/to/pdf2.jpg' },
+                // Add more PDF programs here
+            ],
+            
+            // Question Bank
+            'basic-c/question-bank': [
+                { title: 'Question 1 - Basics', url: 'path/to/q1.jpg' },
+                { title: 'Question 2 - Arrays', url: 'path/to/q2.jpg' },
+                // Add more question bank images here
+            ],
+            
+            // Data Structures
+            'data-structures': [
+                // { title: 'DS Program 1 - Linked Lists', url: 'path/to/ds1.jpg' },
+                // { title: 'DS Program 2 - Stacks', url: 'path/to/ds2.jpg' },
+                // { title: 'DS Program 3 - Queues', url: 'path/to/ds3.jpg' },
+                // Add more data structures programs here
+            ]
+        };
+        // ====================================================================
+
+        // App state
+        let currentPage = 'home';
+        let currentFolder = '';
+        let currentImageIndex = 0;
+        let currentImages = [];
+
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeToggle.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            themeToggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Folder structure
+        const folders = {
+            home: [
+                { id: 'basic-c', icon: '📘', title: 'Basic C Program', description: 'Fundamental C programming resources and examples' },
+                { id: 'data-structures', icon: '🌲', title: 'Data Structures', description: 'Data structures implementations and concepts' }
+            ],
+            'basic-c': [
+                { id: 'basic-c/lab', icon: '🔬', title: 'Lab Programs', description: 'Laboratory programming exercises', hasSubfolders: true },
+                { id: 'basic-c/pdf', icon: '📄', title: 'PDF Programs', description: 'PDF reference materials', hasSubfolders: false },
+                { id: 'basic-c/question-bank', icon: '❓', title: 'Question Bank', description: 'Practice questions and solutions', hasSubfolders: false }
+            ],
+            'basic-c/lab': [
+                { id: 'basic-c/lab/day-1', icon: '1️⃣', title: 'DAY-1', description: 'Day 1 lab exercises' },
+                { id: 'basic-c/lab/day-2', icon: '2️⃣', title: 'DAY-2', description: 'Day 2 lab exercises' },
+                { id: 'basic-c/lab/day-3', icon: '3️⃣', title: 'DAY-3', description: 'Day 3 lab exercises' },
+                { id: 'basic-c/lab/day-4', icon: '4️⃣', title: 'DAY-4', description: 'Day 4 lab exercises' },
+                { id: 'basic-c/lab/day-5', icon: '5️⃣', title: 'DAY-5', description: 'Day 5 lab exercises' },
+                { id: 'basic-c/lab/day-6', icon: '6️⃣', title: 'DAY-6', description: 'Day 6 lab exercises' },
+                { id: 'basic-c/lab/day-7', icon: '7️⃣', title: 'DAY-7', description: 'Day 7 lab exercises' }
+            ]
+        };
+
+        // Navigation
+        function navigate(page, folder = '') {
+            currentPage = page;
+            currentFolder = folder;
+            render();
+        }
+
+        // Breadcrumb
+        function getBreadcrumb() {
+            const crumbs = [{ label: 'Home', page: 'home' }];
+            
+            if (currentFolder) {
+                const parts = currentFolder.split('/');
+                if (parts[0] === 'basic-c') {
+                    crumbs.push({ label: 'Basic C Program', page: 'folder', folder: 'basic-c' });
+                    if (parts[1]) {
+                        const subfolderNames = {
+                            'lab': 'Lab Programs',
+                            'pdf': 'PDF Programs',
+                            'question-bank': 'Question Bank'
+                        };
+                        if (parts[1] === 'lab' && !parts[2]) {
+                            crumbs.push({ label: subfolderNames[parts[1]], page: 'folder', folder: 'basic-c/lab' });
+                        } else if (parts[1] === 'lab' && parts[2]) {
+                            crumbs.push({ label: subfolderNames[parts[1]], page: 'folder', folder: 'basic-c/lab' });
+                            const dayNum = parts[2].split('-')[1];
+                            crumbs.push({ label: `DAY-${dayNum}`, page: 'images', folder: currentFolder });
+                        } else {
+                            crumbs.push({ label: subfolderNames[parts[1]], page: 'images', folder: currentFolder });
+                        }
+                    }
+                } else if (parts[0] === 'data-structures') {
+                    crumbs.push({ label: 'Data Structures', page: 'images', folder: 'data-structures' });
+                }
+            }
+            
+            return crumbs;
+        }
+
+        // Render
+        function render() {
+            const app = document.getElementById('app');
+            const breadcrumbs = getBreadcrumb();
+            
+            let breadcrumbHTML = '<div class="breadcrumb">';
+            breadcrumbs.forEach((crumb, index) => {
+                const isActive = index === breadcrumbs.length - 1;
+                if (index > 0) breadcrumbHTML += '<span class="breadcrumb-separator">›</span>';
+                if (isActive) {
+                    breadcrumbHTML += `<span class="breadcrumb-item active">${crumb.label}</span>`;
+                } else {
+                    breadcrumbHTML += `<a href="#" class="breadcrumb-item" onclick="navigate('${crumb.page}', '${crumb.folder || ''}'); return false;">${crumb.label}</a>`;
+                }
+            });
+            breadcrumbHTML += '</div>';
+
+            if (currentPage === 'home') {
+                app.innerHTML = `
+                    <header>
+                        <h1>Resources</h1>
+                        <p class="subtitle">Your complete C programming study material collection</p>
+                    </header>
+
+                    <div class="about-section">
+                        <div class="about-title">
+                            <span>ℹ️</span>
+                            <span>About This Collection</span>
+                        </div>
+                        <div class="about-content">
+                            ${siteInfo.aboutText}
+                        </div>
+                    </div>
+
+                    ${breadcrumbHTML}
+                    <div class="folder-grid">
+                        ${folders.home.map(folder => `
+                            <div class="folder-card" onclick="navigate('${folder.id === 'data-structures' ? 'images' : 'folder'}', '${folder.id}')">
+                                <div class="folder-icon">${folder.icon}</div>
+                                <div class="folder-title">${folder.title}</div>
+                                <div class="folder-description">${folder.description}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <footer>
+                        <div class="footer-content">
+                            <div class="footer-name">${siteInfo.authorName}</div>
+                            <div class="footer-divider"></div>
+                            <div class="footer-text">
+                                © ${new Date().getFullYear()} ${siteInfo.authorName}. All rights reserved.
+                            </div>
+                            <div class="footer-text">
+                                Last Updated: ${siteInfo.lastUpdated}
+                            </div>
+                        </div>
+                    </footer>
+                `;
+            } else if (currentPage === 'folder') {
+                const folderData = folders[currentFolder];
+                const isLabFolder = currentFolder === 'basic-c/lab';
+                const title = isLabFolder ? 'Lab Programs' : 'Basic C Program';
+                const subtitle = isLabFolder ? 'Choose a day to view programs' : 'Choose a category to view programs';
+                
+                app.innerHTML = `
+                    <header>
+                        <h1>${title}</h1>
+                        <p class="subtitle">${subtitle}</p>
+                    </header>
+                    ${breadcrumbHTML}
+                    <a href="#" class="back-button" onclick="navigate('${isLabFolder ? 'folder' : 'home'}', '${isLabFolder ? 'basic-c' : ''}'); return false;">← Back</a>
+                    <div class="folder-grid">
+                        ${folderData.map(folder => {
+                            const shouldNavigateToImages = folder.hasSubfolders === false || folder.id.includes('day-');
+                            const navigatePage = shouldNavigateToImages ? 'images' : 'folder';
+                            return `
+                                <div class="folder-card" onclick="navigate('${navigatePage}', '${folder.id}')">
+                                    <div class="folder-icon">${folder.icon}</div>
+                                    <div class="folder-title">${folder.title}</div>
+                                    <div class="folder-description">${folder.description}</div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                `;
+            } else if (currentPage === 'images') {
+                const images = imageData[currentFolder] || [];
+                
+                // Determine title based on current folder
+                let title = 'Programs';
+                if (currentFolder === 'data-structures') {
+                    title = 'Data Structures';
+                } else if (currentFolder.includes('lab/day-')) {
+                    const dayNum = currentFolder.split('day-')[1];
+                    title = `Lab Programs - DAY-${dayNum}`;
+                } else if (currentFolder.includes('lab')) {
+                    title = 'Lab Programs';
+                } else if (currentFolder.includes('pdf')) {
+                    title = 'PDF Programs';
+                } else if (currentFolder.includes('question-bank')) {
+                    title = 'Question Bank';
+                }
+                
+                // Determine back navigation
+                let backFolder = '';
+                let backPage = 'home';
+                if (currentFolder.includes('lab/day-')) {
+                    backFolder = 'basic-c/lab';
+                    backPage = 'folder';
+                } else if (currentFolder.includes('/')) {
+                    backFolder = currentFolder.split('/')[0];
+                    backPage = 'folder';
+                }
+                
+                app.innerHTML = `
+                    <header>
+                        <h1>${title}</h1>
+                        <p class="subtitle">Click any program to view in fullscreen</p>
+                    </header>
+                    ${breadcrumbHTML}
+                    <a href="#" class="back-button" onclick="navigate('${backPage}', '${backFolder}'); return false;">← Back</a>
+                    ${images.length > 0 ? `
+                        <div class="image-list">
+                            ${images.map((img, index) => `
+                                <div class="image-item" onclick="openLightbox(${index})">
+                                    <div class="image-title">${img.title}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    ` : `
+                        <div class="empty-state">
+                            <div class="empty-state-icon">📂</div>
+                            <h2>No images yet</h2>
+                            <p>Add images by editing the imageData section in the code</p>
+                        </div>
+                    `}
+                `;
+                
+                currentImages = images;
+            }
+
+            // Add footer to all pages
+            if (currentPage !== 'home') {
+                app.innerHTML += `
+                    <footer>
+                        <div class="footer-content">
+                            <div class="footer-name">${siteInfo.authorName}</div>
+                            <div class="footer-divider"></div>
+                            <div class="footer-text">
+                                © ${new Date().getFullYear()} ${siteInfo.authorName}. All rights reserved.
+                            </div>
+                            <div class="footer-text">
+                                Last Updated: ${siteInfo.lastUpdated}
+                            </div>
+                        </div>
+                    </footer>
+                `;
+            }
+        }
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            updateLightbox();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateLightbox() {
+            const image = currentImages[currentImageIndex];
+            lightboxImage.src = image.url;
+            lightboxTitle.textContent = image.title;
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+            updateLightbox();
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+            updateLightbox();
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxNext.addEventListener('click', nextImage);
+        lightboxPrev.addEventListener('click', prevImage);
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') prevImage();
+                if (e.key === 'Escape') closeLightbox();
+            }
+        });
+
+        // Initial render
+        render();
+    </script>
+</body>
+</html>
