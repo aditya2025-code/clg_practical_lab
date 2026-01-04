@@ -31,3 +31,10 @@ int main()
     printf("%d is Not Composite", n);
   return 0;
 }
+
+//OUTPUT:
+/*
+Enter the Number: 57
+57 is Composite
+Smallest Factor = 3
+*/
