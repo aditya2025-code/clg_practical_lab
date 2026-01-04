@@ -1,4 +1,4 @@
-
+(FOR PROGRAM QUESTION GO TO 705 no. LINE)
 MCQ Questions
 
 Q1. A problem where the output is only YES/NO is best classified as:
@@ -703,6 +703,8 @@ n:
 **
 *
 ---------------CODE FORM HERE(in this folder)----------------------
+(From 1-55 Programs were already added in the PDF program folder. You can find those from there)
+
 56. Write a C program to read N integers into an array and print sum and average.
 
 57. Write a C program to find maximum and minimum elements of an array.
