@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,6 +60,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -76,6 +78,7 @@
                 opacity: 0;
                 transform: translateY(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -94,8 +97,15 @@
         }
 
         @keyframes gradientShift {
-            0%, 100% { filter: hue-rotate(0deg); }
-            50% { filter: hue-rotate(20deg); }
+
+            0%,
+            100% {
+                filter: hue-rotate(0deg);
+            }
+
+            50% {
+                filter: hue-rotate(20deg);
+            }
         }
 
         .subtitle {
@@ -125,8 +135,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .theme-toggle:hover {
@@ -148,6 +165,7 @@
                 opacity: 0;
                 transform: translateX(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -217,16 +235,28 @@
             animation: scaleIn 0.5s ease both;
         }
 
-        .folder-card:nth-child(1) { animation-delay: 0.1s; }
-        .folder-card:nth-child(2) { animation-delay: 0.2s; }
-        .folder-card:nth-child(3) { animation-delay: 0.3s; }
-        .folder-card:nth-child(4) { animation-delay: 0.4s; }
+        .folder-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .folder-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .folder-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .folder-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
 
         @keyframes scaleIn {
             from {
                 opacity: 0;
                 transform: scale(0.8);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -297,14 +327,20 @@
             overflow: hidden;
         }
 
-        .image-item:nth-child(odd) { animation-delay: 0.1s; }
-        .image-item:nth-child(even) { animation-delay: 0.2s; }
+        .image-item:nth-child(odd) {
+            animation-delay: 0.1s;
+        }
+
+        .image-item:nth-child(even) {
+            animation-delay: 0.2s;
+        }
 
         @keyframes slideUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -370,6 +406,7 @@
                 opacity: 0;
                 transform: scale(0.8);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -591,9 +628,10 @@
         }
     </style>
 </head>
+
 <body>
     <button class="theme-toggle" id="themeToggle">☀️</button>
-    
+
     <div class="container" id="app"></div>
 
     <div class="lightbox" id="lightbox">
@@ -625,54 +663,61 @@
             'basic-c/lab/day-1': [
                 { title: 'Program 1 - Display Your Name', url: 'images/lab/DAY_01/01_displayname.jpg' },
                 { title: 'Program 2 - Datatypes', url: 'images/lab/DAY_01/code-2.jpg' },
-                { title: 'Program 2 - Run Time Input', url: 'images/lab/DAY_01/code-3.jpg' },
+                { title: 'Program 3 - Run Time Input', url: 'images/lab/DAY_01/code-3.jpg' },
                 // Add more Day 1 programs here
             ],
             'basic-c/lab/day-2': [
-                { title: 'Day 2 - Program 1', url: 'path/to/day2-prog1.jpg' },
-                { title: 'Day 2 - Program 2', url: 'path/to/day2-prog2.jpg' },
+                { title: 'Program 4 - Arithmetic Operator', url: 'images/lab/DAY_02/code-1.jpg' },
+                { title: 'Program 5 - Power & Square Root', url: 'images/lab/DAY_02/code-2.jpg' },
+                { title: 'Program 6 - celsius to fahrenheit', url: 'images/lab/DAY_02/code-3.jpg' },
+                { title: 'Program 7 - fahrenheit to celsius', url: 'images/lab/DAY_02/code-4.jpg' },
+                { title: 'Program 8 - Area of a circul', url: 'images/lab/DAY_02/code-5.jpg' },
+                { title: 'Program 9 - Area of a Square', url: 'images/lab/DAY_02/code-6.jpg' },
+                { title: 'Program 10 - Area of a Equilateral Triangle', url: 'images/lab/DAY_02/code-7.jpg' },
+                { title: 'Program 11 - Area of a Isosceles Triangle', url: 'images/lab/DAY_02/code-8.jpg' },
+
                 // Add more Day 2 programs here
             ],
             'basic-c/lab/day-3': [
-                { title: 'Day 3 - Program 1', url: 'path/to/day3-prog1.jpg' },
-                { title: 'Day 3 - Program 2', url: 'path/to/day3-prog2.jpg' },
-                // Add more Day 3 programs here
+                // { title: 'Day 3 - Program 1', url: 'path/to/day3-prog1.jpg' },
+                // { title: 'Day 3 - Program 2', url: 'path/to/day3-prog2.jpg' },
+                // // Add more Day 3 programs here
             ],
             'basic-c/lab/day-4': [
-                { title: 'Day 4 - Program 1', url: 'path/to/day4-prog1.jpg' },
-                { title: 'Day 4 - Program 2', url: 'path/to/day4-prog2.jpg' },
+                // { title: 'Day 4 - Program 1', url: 'path/to/day4-prog1.jpg' },
+                // { title: 'Day 4 - Program 2', url: 'path/to/day4-prog2.jpg' },
                 // Add more Day 4 programs here
             ],
             'basic-c/lab/day-5': [
-                { title: 'Day 5 - Program 1', url: 'path/to/day5-prog1.jpg' },
-                { title: 'Day 5 - Program 2', url: 'path/to/day5-prog2.jpg' },
-                // Add more Day 5 programs here
+                // { title: 'Day 5 - Program 1', url: 'path/to/day5-prog1.jpg' },
+                // { title: 'Day 5 - Program 2', url: 'path/to/day5-prog2.jpg' },
+                // // Add more Day 5 programs here
             ],
             'basic-c/lab/day-6': [
-                { title: 'Day 6 - Program 1', url: 'path/to/day6-prog1.jpg' },
-                { title: 'Day 6 - Program 2', url: 'path/to/day6-prog2.jpg' },
-                // Add more Day 6 programs here
+                // { title: 'Day 6 - Program 1', url: 'path/to/day6-prog1.jpg' },
+                // { title: 'Day 6 - Program 2', url: 'path/to/day6-prog2.jpg' },
+                // // Add more Day 6 programs here
             ],
             'basic-c/lab/day-7': [
-                { title: 'Day 7 - Program 1', url: 'path/to/day7-prog1.jpg' },
-                { title: 'Day 7 - Program 2', url: 'path/to/day7-prog2.jpg' },
+                //{ title: 'Day 7 - Program 1', url: 'path/to/day7-prog1.jpg' },
+                //{ title: 'Day 7 - Program 2', url: 'path/to/day7-prog2.jpg' },
                 // Add more Day 7 programs here
             ],
-            
+
             // PDF Programs
             'basic-c/pdf': [
-                { title: 'PDF Program 1 - Input Output', url: 'path/to/pdf1.jpg' },
-                { title: 'PDF Program 2 - Functions', url: 'path/to/pdf2.jpg' },
+              //  { title: 'PDF Program 1 - Input Output', url: 'path/to/pdf1.jpg' },
+              //  { title: 'PDF Program 2 - Functions', url: 'path/to/pdf2.jpg' },
                 // Add more PDF programs here
             ],
-            
+
             // Question Bank
             'basic-c/question-bank': [
-                { title: 'Question 1 - Basics', url: 'path/to/q1.jpg' },
-                { title: 'Question 2 - Arrays', url: 'path/to/q2.jpg' },
+              //  { title: 'Question 1 - Basics', url: 'path/to/q1.jpg' },
+               // { title: 'Question 2 - Arrays', url: 'path/to/q2.jpg' },
                 // Add more question bank images here
             ],
-            
+
             // Data Structures
             'data-structures': [
                 // { title: 'DS Program 1 - Linked Lists', url: 'path/to/ds1.jpg' },
@@ -735,7 +780,7 @@
         // Breadcrumb
         function getBreadcrumb() {
             const crumbs = [{ label: 'Home', page: 'home' }];
-            
+
             if (currentFolder) {
                 const parts = currentFolder.split('/');
                 if (parts[0] === 'basic-c') {
@@ -760,7 +805,7 @@
                     crumbs.push({ label: 'Data Structures', page: 'images', folder: 'data-structures' });
                 }
             }
-            
+
             return crumbs;
         }
 
@@ -768,7 +813,7 @@
         function render() {
             const app = document.getElementById('app');
             const breadcrumbs = getBreadcrumb();
-            
+
             let breadcrumbHTML = '<div class="breadcrumb">';
             breadcrumbs.forEach((crumb, index) => {
                 const isActive = index === breadcrumbs.length - 1;
@@ -827,7 +872,7 @@
                 const isLabFolder = currentFolder === 'basic-c/lab';
                 const title = isLabFolder ? 'Lab Programs' : 'Basic C Program';
                 const subtitle = isLabFolder ? 'Choose a day to view programs' : 'Choose a category to view programs';
-                
+
                 app.innerHTML = `
                     <header>
                         <h1>${title}</h1>
@@ -837,21 +882,21 @@
                     <a href="#" class="back-button" onclick="navigate('${isLabFolder ? 'folder' : 'home'}', '${isLabFolder ? 'basic-c' : ''}'); return false;">← Back</a>
                     <div class="folder-grid">
                         ${folderData.map(folder => {
-                            const shouldNavigateToImages = folder.hasSubfolders === false || folder.id.includes('day-');
-                            const navigatePage = shouldNavigateToImages ? 'images' : 'folder';
-                            return `
+                    const shouldNavigateToImages = folder.hasSubfolders === false || folder.id.includes('day-');
+                    const navigatePage = shouldNavigateToImages ? 'images' : 'folder';
+                    return `
                                 <div class="folder-card" onclick="navigate('${navigatePage}', '${folder.id}')">
                                     <div class="folder-icon">${folder.icon}</div>
                                     <div class="folder-title">${folder.title}</div>
                                     <div class="folder-description">${folder.description}</div>
                                 </div>
                             `;
-                        }).join('')}
+                }).join('')}
                     </div>
                 `;
             } else if (currentPage === 'images') {
                 const images = imageData[currentFolder] || [];
-                
+
                 // Determine title based on current folder
                 let title = 'Programs';
                 if (currentFolder === 'data-structures') {
@@ -866,7 +911,7 @@
                 } else if (currentFolder.includes('question-bank')) {
                     title = 'Question Bank';
                 }
-                
+
                 // Determine back navigation
                 let backFolder = '';
                 let backPage = 'home';
@@ -877,7 +922,7 @@
                     backFolder = currentFolder.split('/')[0];
                     backPage = 'folder';
                 }
-                
+
                 app.innerHTML = `
                     <header>
                         <h1>${title}</h1>
@@ -901,7 +946,7 @@
                         </div>
                     `}
                 `;
-                
+
                 currentImages = images;
             }
 
@@ -981,4 +1026,5 @@
         render();
     </script>
 </body>
+
 </html>
