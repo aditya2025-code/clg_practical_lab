@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,7 +59,6 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -78,7 +76,6 @@
                 opacity: 0;
                 transform: translateY(-30px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -97,15 +94,8 @@
         }
 
         @keyframes gradientShift {
-
-            0%,
-            100% {
-                filter: hue-rotate(0deg);
-            }
-
-            50% {
-                filter: hue-rotate(20deg);
-            }
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(20deg); }
         }
 
         .subtitle {
@@ -135,15 +125,8 @@
         }
 
         @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
         .theme-toggle:hover {
@@ -165,7 +148,6 @@
                 opacity: 0;
                 transform: translateX(-30px);
             }
-
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -235,28 +217,16 @@
             animation: scaleIn 0.5s ease both;
         }
 
-        .folder-card:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .folder-card:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .folder-card:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-
-        .folder-card:nth-child(4) {
-            animation-delay: 0.4s;
-        }
+        .folder-card:nth-child(1) { animation-delay: 0.1s; }
+        .folder-card:nth-child(2) { animation-delay: 0.2s; }
+        .folder-card:nth-child(3) { animation-delay: 0.3s; }
+        .folder-card:nth-child(4) { animation-delay: 0.4s; }
 
         @keyframes scaleIn {
             from {
                 opacity: 0;
                 transform: scale(0.8);
             }
-
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -327,20 +297,14 @@
             overflow: hidden;
         }
 
-        .image-item:nth-child(odd) {
-            animation-delay: 0.1s;
-        }
-
-        .image-item:nth-child(even) {
-            animation-delay: 0.2s;
-        }
+        .image-item:nth-child(odd) { animation-delay: 0.1s; }
+        .image-item:nth-child(even) { animation-delay: 0.2s; }
 
         @keyframes slideUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -406,7 +370,6 @@
                 opacity: 0;
                 transform: scale(0.8);
             }
-
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -508,6 +471,108 @@
             padding: 30px;
             margin: 40px 0;
             animation: fadeIn 0.8s ease;
+        }
+
+        .search-section {
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0;
+            animation: fadeIn 0.8s ease 0.2s both;
+        }
+
+        .search-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 16px 50px 16px 20px;
+            font-size: 1.1rem;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: var(--text-secondary);
+            pointer-events: none;
+        }
+
+        .search-results {
+            margin-top: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .search-results.active {
+            display: block;
+        }
+
+        .search-result-item {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideUp 0.3s ease;
+        }
+
+        .search-result-item:hover {
+            border-color: var(--accent);
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .search-result-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 1.05rem;
+        }
+
+        .search-result-path {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        .search-result-arrow {
+            color: var(--accent);
+            font-size: 20px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-secondary);
+        }
+
+        .no-results-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+            opacity: 0.5;
         }
 
         .about-title {
@@ -618,6 +683,15 @@
                 font-size: 1.5rem;
             }
 
+            .search-section {
+                padding: 20px;
+            }
+
+            .search-input {
+                font-size: 1rem;
+                padding: 14px 45px 14px 16px;
+            }
+
             footer {
                 padding: 30px 15px;
             }
@@ -628,10 +702,9 @@
         }
     </style>
 </head>
-
 <body>
     <button class="theme-toggle" id="themeToggle">☀️</button>
-
+    
     <div class="container" id="app"></div>
 
     <div class="lightbox" id="lightbox">
@@ -664,7 +737,6 @@
                 { title: 'Program 1 - Display Your Name', url: 'images/lab/DAY_01/01_displayname.jpg' },
                 { title: 'Program 2 - Datatypes', url: 'images/lab/DAY_01/code-2.jpg' },
                 { title: 'Program 3 - Run Time Input', url: 'images/lab/DAY_01/code-3.jpg' },
-                // Add more Day 1 programs here
             ],
             'basic-c/lab/day-2': [
                 { title: 'Program 4 - Arithmetic Operator', url: 'images/lab/DAY_02/code-1.jpg' },
@@ -675,19 +747,13 @@
                 { title: 'Program 9 - Area of a Square', url: 'images/lab/DAY_02/code-6.jpg' },
                 { title: 'Program 10 - Area of a Equilateral Triangle', url: 'images/lab/DAY_02/code-7.jpg' },
                 { title: 'Program 11 - Area of a Isosceles Triangle', url: 'images/lab/DAY_02/code-8.jpg' },
-
-                // Add more Day 2 programs here
             ],
             'basic-c/lab/day-3': [
                 { title: 'Program 12 - Logical Oparator', url: 'images/lab/DAY_03/code-1.jpg' },
                 { title: 'Program 13 - Bitwise abd OR oparator', url: 'images/lab/DAY_03/code-2.jpg' },
-
-                // // Add more Day 3 programs here
             ],
             'basic-c/lab/day-4': [
                 { title: 'Program 14 - Bitwise Oparator', url: 'images/lab/DAY_04/code-1.jpg' },
-
-                // Add more Day 4 programs here
             ],
             'basic-c/lab/day-5': [
                 { title: 'Program 15 - Even or Odd number', url: 'images/lab/DAY_05/code-1.jpg' },
@@ -699,39 +765,26 @@
                 { title: 'Program 21 - Small number Check', url: 'images/lab/DAY_05/code-7.jpg' },
                 { title: 'Program 22 - Positive or Negetive check', url: 'images/lab/DAY_05/code-8.jpg' },
                 { title: 'Program 23 - Leap Year check(part 2)', url: 'images/lab/DAY_05/code-9.jpg' },
-
-                // // Add more Day 5 programs here
             ],
             'basic-c/lab/day-6': [
-                // { title: 'Day 6 - Program 1', url: 'path/to/day6-prog1.jpg' },
-                // { title: 'Day 6 - Program 2', url: 'path/to/day6-prog2.jpg' },
-                // // Add more Day 6 programs here
+                // Add Day 6 programs here
             ],
             'basic-c/lab/day-7': [
-                //{ title: 'Day 7 - Program 1', url: 'path/to/day7-prog1.jpg' },
-                //{ title: 'Day 7 - Program 2', url: 'path/to/day7-prog2.jpg' },
-                // Add more Day 7 programs here
+                // Add Day 7 programs here
             ],
-
+            
             // PDF Programs
             'basic-c/pdf': [
-                //  { title: 'PDF Program 1 - Input Output', url: 'path/to/pdf1.jpg' },
-                //  { title: 'PDF Program 2 - Functions', url: 'path/to/pdf2.jpg' },
                 // Add more PDF programs here
             ],
-
+            
             // Question Bank
             'basic-c/question-bank': [
-                //  { title: 'Question 1 - Basics', url: 'path/to/q1.jpg' },
-                // { title: 'Question 2 - Arrays', url: 'path/to/q2.jpg' },
                 // Add more question bank images here
             ],
-
+            
             // Data Structures
             'data-structures': [
-                // { title: 'DS Program 1 - Linked Lists', url: 'path/to/ds1.jpg' },
-                // { title: 'DS Program 2 - Stacks', url: 'path/to/ds2.jpg' },
-                // { title: 'DS Program 3 - Queues', url: 'path/to/ds3.jpg' },
                 // Add more data structures programs here
             ]
         };
@@ -742,6 +795,63 @@
         let currentFolder = '';
         let currentImageIndex = 0;
         let currentImages = [];
+        let allPrograms = []; // Store all programs for search
+
+        // Build search index
+        function buildSearchIndex() {
+            allPrograms = [];
+            for (const [folder, programs] of Object.entries(imageData)) {
+                programs.forEach((program, index) => {
+                    allPrograms.push({
+                        title: program.title,
+                        url: program.url,
+                        folder: folder,
+                        index: index
+                    });
+                });
+            }
+        }
+
+        // Search function
+        function searchPrograms(query) {
+            if (!query.trim()) {
+                return [];
+            }
+            
+            const searchTerm = query.toLowerCase();
+            return allPrograms.filter(program => 
+                program.title.toLowerCase().includes(searchTerm)
+            );
+        }
+
+        // Navigate to specific program
+        function navigateToProgram(folder, index) {
+            currentPage = 'images';
+            currentFolder = folder;
+            currentImages = imageData[folder];
+            render();
+            // Open lightbox with the specific image
+            setTimeout(() => openLightbox(index), 100);
+        }
+
+        // Get folder path for display
+        function getFolderPath(folder) {
+            const parts = folder.split('/');
+            if (parts[0] === 'basic-c') {
+                if (parts[1] === 'lab' && parts[2]) {
+                    return `Basic C Program › Lab Programs › DAY-${parts[2].split('-')[1]}`;
+                } else if (parts[1] === 'lab') {
+                    return 'Basic C Program › Lab Programs';
+                } else if (parts[1] === 'pdf') {
+                    return 'Basic C Program › PDF Programs';
+                } else if (parts[1] === 'question-bank') {
+                    return 'Basic C Program › Question Bank';
+                }
+            } else if (parts[0] === 'data-structures') {
+                return 'Data Structures';
+            }
+            return folder;
+        }
 
         // Theme toggle
         const themeToggle = document.getElementById('themeToggle');
@@ -789,7 +899,7 @@
         // Breadcrumb
         function getBreadcrumb() {
             const crumbs = [{ label: 'Home', page: 'home' }];
-
+            
             if (currentFolder) {
                 const parts = currentFolder.split('/');
                 if (parts[0] === 'basic-c') {
@@ -814,7 +924,7 @@
                     crumbs.push({ label: 'Data Structures', page: 'images', folder: 'data-structures' });
                 }
             }
-
+            
             return crumbs;
         }
 
@@ -822,7 +932,7 @@
         function render() {
             const app = document.getElementById('app');
             const breadcrumbs = getBreadcrumb();
-
+            
             let breadcrumbHTML = '<div class="breadcrumb">';
             breadcrumbs.forEach((crumb, index) => {
                 const isActive = index === breadcrumbs.length - 1;
@@ -841,6 +951,19 @@
                         <h1>Resources</h1>
                         <p class="subtitle">Your complete C programming study material collection</p>
                     </header>
+
+                    <div class="search-section">
+                        <div class="search-container">
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                class="search-input" 
+                                placeholder="Search programs by number or name... (e.g., 'Program 1' or 'Hello World')"
+                            >
+                            <span class="search-icon">🔍</span>
+                        </div>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
 
                     <div class="about-section">
                         <div class="about-title">
@@ -876,12 +999,49 @@
                         </div>
                     </footer>
                 `;
+
+                // Add search functionality
+                const searchInput = document.getElementById('searchInput');
+                const searchResults = document.getElementById('searchResults');
+
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value;
+                    const results = searchPrograms(query);
+
+                    if (query.trim() === '') {
+                        searchResults.classList.remove('active');
+                        searchResults.innerHTML = '';
+                        return;
+                    }
+
+                    if (results.length === 0) {
+                        searchResults.classList.add('active');
+                        searchResults.innerHTML = `
+                            <div class="no-results">
+                                <div class="no-results-icon">🔍</div>
+                                <p>No programs found matching "${query}"</p>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    searchResults.classList.add('active');
+                    searchResults.innerHTML = results.map(result => `
+                        <div class="search-result-item" onclick="navigateToProgram('${result.folder}', ${result.index})">
+                            <div>
+                                <div class="search-result-title">${result.title}</div>
+                                <div class="search-result-path">${getFolderPath(result.folder)}</div>
+                            </div>
+                            <div class="search-result-arrow">→</div>
+                        </div>
+                    `).join('');
+                });
             } else if (currentPage === 'folder') {
                 const folderData = folders[currentFolder];
                 const isLabFolder = currentFolder === 'basic-c/lab';
                 const title = isLabFolder ? 'Lab Programs' : 'Basic C Program';
                 const subtitle = isLabFolder ? 'Choose a day to view programs' : 'Choose a category to view programs';
-
+                
                 app.innerHTML = `
                     <header>
                         <h1>${title}</h1>
@@ -891,21 +1051,21 @@
                     <a href="#" class="back-button" onclick="navigate('${isLabFolder ? 'folder' : 'home'}', '${isLabFolder ? 'basic-c' : ''}'); return false;">← Back</a>
                     <div class="folder-grid">
                         ${folderData.map(folder => {
-                    const shouldNavigateToImages = folder.hasSubfolders === false || folder.id.includes('day-');
-                    const navigatePage = shouldNavigateToImages ? 'images' : 'folder';
-                    return `
+                            const shouldNavigateToImages = folder.hasSubfolders === false || folder.id.includes('day-');
+                            const navigatePage = shouldNavigateToImages ? 'images' : 'folder';
+                            return `
                                 <div class="folder-card" onclick="navigate('${navigatePage}', '${folder.id}')">
                                     <div class="folder-icon">${folder.icon}</div>
                                     <div class="folder-title">${folder.title}</div>
                                     <div class="folder-description">${folder.description}</div>
                                 </div>
                             `;
-                }).join('')}
+                        }).join('')}
                     </div>
                 `;
             } else if (currentPage === 'images') {
                 const images = imageData[currentFolder] || [];
-
+                
                 // Determine title based on current folder
                 let title = 'Programs';
                 if (currentFolder === 'data-structures') {
@@ -920,7 +1080,7 @@
                 } else if (currentFolder.includes('question-bank')) {
                     title = 'Question Bank';
                 }
-
+                
                 // Determine back navigation
                 let backFolder = '';
                 let backPage = 'home';
@@ -931,7 +1091,7 @@
                     backFolder = currentFolder.split('/')[0];
                     backPage = 'folder';
                 }
-
+                
                 app.innerHTML = `
                     <header>
                         <h1>${title}</h1>
@@ -955,7 +1115,7 @@
                         </div>
                     `}
                 `;
-
+                
                 currentImages = images;
             }
 
@@ -1032,8 +1192,8 @@
         });
 
         // Initial render
+        buildSearchIndex(); // Build search index on load
         render();
     </script>
 </body>
-
 </html>
