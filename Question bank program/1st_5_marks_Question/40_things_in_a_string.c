@@ -19,32 +19,32 @@ int main()
       continue;
     }
     else if (a[i] >= 65 && a[i] <= 90 || a[i] >= 97 && a[i] <= 122)
-      goto start;
+    {
+      switch (a[i])
+      {
+      case 'a':
+      case 'A':
+      case 'e':
+      case 'E':
+      case 'i':
+      case 'I':
+      case 'o':
+      case 'O':
+      case 'u':
+      case 'U':
+        count1++;
+        break;
+      default:
+        count2++;
+        continue;
+      }
+    }
     else if (a[i] == 10)
       continue;
     else
     {
       count_c++;
       continue;
-    }
-  start:
-    switch (a[i])
-    {
-    case 'a':
-    case 'A':
-    case 'e':
-    case 'E':
-    case 'i':
-    case 'I':
-    case 'o':
-    case 'O':
-    case 'u':
-    case 'U':
-      count1++;
-      break;
-    default:
-      count2++;
-      break;
     }
   }
   printf("Space = %d", count_s);
