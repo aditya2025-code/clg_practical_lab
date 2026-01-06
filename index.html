@@ -396,7 +396,7 @@
         }
 
         .lightbox-close {
-            position: absolute;
+            position: fixed;
             top: 20px;
             right: 20px;
             width: 50px;
@@ -412,6 +412,7 @@
             justify-content: center;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
+            z-index: 2001;
         }
 
         .lightbox-close:hover {
@@ -419,8 +420,13 @@
             transform: rotate(90deg) scale(1.1);
         }
 
+        .lightbox-close:active {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg) scale(0.95);
+        }
+
         .lightbox-nav {
-            position: absolute;
+            position: fixed;
             top: 50%;
             transform: translateY(-50%);
             width: 50px;
@@ -436,6 +442,7 @@
             justify-content: center;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
+            z-index: 2001;
         }
 
         .lightbox-nav:hover {
@@ -443,12 +450,17 @@
             transform: translateY(-50%) scale(1.1);
         }
 
+        .lightbox-nav:active {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(0.95);
+        }
+
         .lightbox-prev {
-            left: 20px;
+            left: 10px;
         }
 
         .lightbox-next {
-            right: 20px;
+            right: 10px;
         }
 
         .empty-state {
@@ -630,22 +642,36 @@
             border-radius: 2px;
         }
 
-        .footer-links {
+        .footer-social {
             display: flex;
             gap: 20px;
-            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
             justify-content: center;
-        }
-
-        .footer-link {
-            color: var(--text-secondary);
+            width: 45px;
+            height: 45px;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            color: var(--text-primary);
             text-decoration: none;
+            font-size: 20px;
             transition: all 0.3s ease;
-            font-size: 0.9rem;
         }
 
-        .footer-link:hover {
-            color: var(--accent);
+        .social-link:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--shadow);
+            border-color: var(--accent);
+        }
+
+        .social-link:active {
             transform: translateY(-2px);
         }
 
@@ -670,9 +696,39 @@
             }
 
             .lightbox-nav {
-                width: 40px;
-                height: 40px;
-                font-size: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 22px;
+            }
+
+            .lightbox-close {
+                width: 45px;
+                height: 45px;
+                font-size: 24px;
+                top: 10px;
+                right: 10px;
+            }
+
+            .lightbox-prev {
+                left: 5px;
+            }
+
+            .lightbox-next {
+                right: 5px;
+            }
+
+            .lightbox-content {
+                max-width: 95%;
+                max-height: 85%;
+            }
+
+            .lightbox-image {
+                max-height: 85vh;
+            }
+
+            .lightbox-title {
+                bottom: -40px;
+                font-size: 1rem;
             }
 
             .about-section {
@@ -723,7 +779,7 @@
         // ====================================================================
         const siteInfo = {
             authorName: 'Aditya Das',  // ← Change this to your name
-            lastUpdated: 'January 5, 2026', // ← Update this date when you add new content
+            lastUpdated: 'January 6, 2026', // ← Update this date when you add new content
             aboutText: 'This is a comprehensive collection of C programming resources designed to help students master fundamental programming concepts and data structures. The materials include lab programs, PDF references, question banks, and detailed implementations to support your learning journey.' // ← Customize your about text
         };
         // ====================================================================
@@ -965,16 +1021,6 @@
                         <div class="search-results" id="searchResults"></div>
                     </div>
 
-                    <div class="about-section">
-                        <div class="about-title">
-                            <span>ℹ️</span>
-                            <span>About This Collection</span>
-                        </div>
-                        <div class="about-content">
-                            ${siteInfo.aboutText}
-                        </div>
-                    </div>
-
                     ${breadcrumbHTML}
                     <div class="folder-grid">
                         ${folders.home.map(folder => `
@@ -984,6 +1030,16 @@
                                 <div class="folder-description">${folder.description}</div>
                             </div>
                         `).join('')}
+                    </div>
+
+                    <div class="about-section">
+                        <div class="about-title">
+                            <span>ℹ️</span>
+                            <span>About This Collection</span>
+                        </div>
+                        <div class="about-content">
+                            ${siteInfo.aboutText}
+                        </div>
                     </div>
 
                     <footer>
@@ -1111,7 +1167,7 @@
                         <div class="empty-state">
                             <div class="empty-state-icon">📂</div>
                             <h2>No images yet</h2>
-                            <p>Images will comming soon!!</p>
+                            <p>Images will coming soon !!</p>
                         </div>
                     `}
                 `;
