@@ -10,42 +10,37 @@
 
 int main()
 {
-  int i, j, n;
-  printf("Enter number of Row: ");
+  int n, r, c;
+  printf("Enter the Rows: ");
   scanf("%d", &n);
-  for (i = 1; i <= n; i++)
+  for (r = 1; r <= n; r++)
   {
-    for (j = i; j < n - i; j++)
+    for (c = 1; c <= n - r; c++)
       printf(" ");
-
-    for (j = 1; j <= i; j++)
+    for (c = 1; c <= r; c++)
       printf("* ");
-
     printf("\n");
   }
-  for (i = n - 1; i >= i; i--)
+  for (r = n - 1; r >= 1; r--)
   {
-    for (j = i; j < n - 1; j++)
+    for (c = 1; c <= n - r; c++)
       printf(" ");
-
-    for (j = 1; j <= i; j++)
+    for (c = 1; c <= r; c++)
       printf("* ");
-
     printf("\n");
   }
-
   return 0;
 }
 // OUTPUT:
 /*
-Enter number of Row: 5
-      *
-     * *
-    * * *
-   * * * *
-  * * * * *
-   * * * *
-    * * *
-     * *
-      *
+Enter the Rows: 5
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
 */
