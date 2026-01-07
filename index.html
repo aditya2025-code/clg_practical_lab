@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,6 +60,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -76,6 +78,7 @@
                 opacity: 0;
                 transform: translateY(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -94,8 +97,15 @@
         }
 
         @keyframes gradientShift {
-            0%, 100% { filter: hue-rotate(0deg); }
-            50% { filter: hue-rotate(20deg); }
+
+            0%,
+            100% {
+                filter: hue-rotate(0deg);
+            }
+
+            50% {
+                filter: hue-rotate(20deg);
+            }
         }
 
         .subtitle {
@@ -125,8 +135,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .theme-toggle:hover {
@@ -148,6 +165,7 @@
                 opacity: 0;
                 transform: translateX(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -217,16 +235,28 @@
             animation: scaleIn 0.5s ease both;
         }
 
-        .folder-card:nth-child(1) { animation-delay: 0.1s; }
-        .folder-card:nth-child(2) { animation-delay: 0.2s; }
-        .folder-card:nth-child(3) { animation-delay: 0.3s; }
-        .folder-card:nth-child(4) { animation-delay: 0.4s; }
+        .folder-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .folder-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .folder-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .folder-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
 
         @keyframes scaleIn {
             from {
                 opacity: 0;
                 transform: scale(0.8);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -297,14 +327,20 @@
             overflow: hidden;
         }
 
-        .image-item:nth-child(odd) { animation-delay: 0.1s; }
-        .image-item:nth-child(even) { animation-delay: 0.2s; }
+        .image-item:nth-child(odd) {
+            animation-delay: 0.1s;
+        }
+
+        .image-item:nth-child(even) {
+            animation-delay: 0.2s;
+        }
 
         @keyframes slideUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -370,6 +406,7 @@
                 opacity: 0;
                 transform: scale(0.8);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -758,9 +795,10 @@
         }
     </style>
 </head>
+
 <body>
     <button class="theme-toggle" id="themeToggle">☀️</button>
-    
+
     <div class="container" id="app"></div>
 
     <div class="lightbox" id="lightbox">
@@ -865,17 +903,73 @@
                 { title: 'Lab Program 59 - Large Number Switch-case', url: 'images/lab/DAY_07/code-10.jpg' },
 
             ],
-            
+
             // PDF Programs
             'basic-c/pdf': [
                 // Add more PDF programs here
+                { title: 'PDF Program 1 - Sum of first N natural numbers', url: 'images/PDF programs/code-1.png' },
+                { title: 'PDF Program 2 - Sum of even numbers up to N', url: 'images/PDF programs/code-2.png' },
+                { title: 'PDF Program 3 - Factorial of a number', url: 'images/PDF programs/code-3.png' },
+                { title: 'PDF Program 4 - Table of Number', url: 'images/PDF programs/code-4.png' },
+                { title: 'PDF Program 5 - Reverse Counting', url: 'images/PDF programs/code-5.png' },
+                { title: 'PDF Program 6 - Digit Count', url: 'images/PDF programs/code-6.png' },
+                { title: 'PDF Program 7 - Sum of Digit', url: 'images/PDF programs/code-7.png' },
+                { title: 'PDF Program 8 - Reverse a Number', url: 'images/PDF programs/code-8.png' },
+                { title: 'PDF Program 9 - Palindrome Number Check (3-digit)', url: 'images/PDF programs/code-9.png' },
+                { title: 'PDF Program 10 - Armstrong Number Check', url: 'images/PDF programs/code-10.png' },
+                { title: 'PDF Program 11 - Power using repeated multiplication', url: 'images/PDF programs/code-11.png' },
+                { title: 'PDF Program 12 - Print all even numbers between two numbers', url: 'images/PDF programs/code-12.png' },
+                { title: 'PDF Program 13 - Print all odd numbers between two numbers', url: 'images/PDF programs/code-13.png' },
+                { title: 'PDF Program 14 - Prime Number Check', url: 'images/PDF programs/code-14.png' },
+                { title: 'PDF Program 15 - Print all primes in a range', url: 'images/PDF programs/code-15.png' },
+                { title: 'PDF Program 16 - Fibonacci series (first N terms)', url: 'images/PDF programs/code-16.png' },
+                { title: 'PDF Program 17 - Fibonacci series up to a limit', url: 'images/PDF programs/code-17.png' },
+                { title: 'PDF Program 18 - LCM using repeated addition / loop', url: 'images/PDF programs/code-18.png' },
+                { title: 'PDF Program 19 - GCD using repeated subtraction / loop', url: 'images/PDF programs/code-19.png' },
+                { title: 'PDF Program 20 - Menu-driven calculator using loop', url: 'images/PDF programs/code-20.png' },
+                { title: 'PDF Program 21 - Sum of series: 1 + 1/2 + 1/3 + … + 1/n', url: 'images/PDF programs/code-21.png' },
+                { title: 'PDF Program 22 - Print characters A-Z using loop', url: 'images/PDF programs/code-22.png' },
+                { title: 'PDF Program 23 - Count vowels in a string (using loop)', url: 'images/PDF programs/code-23.png' },
+                { title: 'PDF Program 24 - Count spaces and digits in a string', url: 'images/PDF programs/code-24.png' },
+                { title: 'PDF Program 25 - Sum of elements in an array using loop', url: 'images/PDF programs/code-25.png' },
+                { title: 'PDF Program 26 - Maximum element in an array (loop)', url: 'images/PDF programs/code-26.png' },
+                { title: 'PDF Program 27 - Linear search using loop', url: 'images/PDF programs/code-27.png' },
+                { title: 'PDF Program 28 - Frequency of a given element in an array', url: 'images/PDF programs/code-28.png' },
+                { title: 'PDF Program 29 - Reverse an array using loop', url: 'images/PDF programs/code-29.png' },
+                { title: 'PDF Program 30 - Bubble sort using nested loops', url: 'images/PDF programs/code-30.png' },
+                { title: 'PDF Program 31 - Pattern 1: Right-angled triangle of stars', url: 'images/PDF programs/code-31.png' },
+                { title: 'PDF Program 32 - Pattern 2: Inverted right-angled triangle', url: 'images/PDF programs/code-32.png' },
+                { title: 'PDF Program 33 - Pattern 3: Floyds triangle (1, 2, 3, …)', url: 'images/PDF programs/code-33.png' },
+                { title: 'PDF Program 34 - Pattern 4: Number triangle', url: 'images/PDF programs/code-34.png' },
+                { title: 'PDF Program 35 - Pattern 5: Pyramid of stars', url: 'images/PDF programs/code-35.png' },
+                { title: 'PDF Program 36 - Sum of even and odd elements separately', url: 'images/PDF programs/code-36.png' },
+                { title: 'PDF Program 37 - Count positive, negative, zero numbers', url: 'images/PDF programs/code-37.png' },
+                { title: 'PDF Program 38 - Read until -1 and compute average', url: 'images/PDF programs/code-38.png' },
+                //{ title: 'PDF Program 39 - ', url: 'images/PDF programs/code-39.png' },
+                { title: 'PDF Program 40 - Check if a number is perfect', url: 'images/PDF programs/code-40.png' },
+                { title: 'PDF Program 41 - Print all perfect numbers in a range', url: 'images/PDF programs/code-41.png' },
+                { title: 'PDF Program 42 - Count occcurence of digits', url: 'images/PDF programs/code-42.png' },
+                { title: 'PDF Program 43 - Convert decimal to binary (using loop)', url: 'images/PDF programs/code-43.png' },
+                { title: 'PDF Program 44 - Print digits of a number in words', url: 'images/PDF programs/code-44.png' },
+                { title: 'PDF Program 45 - Check if a number is strong number', url: 'images/PDF programs/code-45.png' },
+                { title: 'PDF Program 46 - Sum of series: 1² + 2² + 3² + … + n²', url: 'images/PDF programs/code-46.png' },
+                { title: 'PDF Program 47 - Sum of series: 1³ + 2³ + 3³ + … + n³', url: 'images/PDF programs/code-47.png' },
+                { title: 'PDF Program 48 - Print all factors of a number', url: 'images/PDF programs/code-48.png' },
+                { title: 'PDF Program 49 - Check if a number is composite', url: 'images/PDF programs/code-49.png' },
+                { title: 'PDF Program 50 - Do-while menu for repeated input', url: 'images/PDF programs/code-50.png' },
+                { title: 'PDF Program 51 - Pattern 6: Right-angled triangle of numbers for a given n', url: 'images/PDF programs/code-51.png' },
+                { title: 'PDF Program 52 - Pattern 7: Pattern of repeated row numbers for a given n', url: 'images/PDF programs/code-52.png' },
+                { title: 'PDF Program 53 - Pattern 8: Pyramid pattern of stars (centre aligned)', url: 'images/PDF programs/code-53.png' },
+                { title: 'PDF Program 54 - Pattern 9: Inverted pyramid pattern of stars', url: 'images/PDF programs/code-54.png' },
+                { title: 'PDF Program 55 - Pattern 10: Diamond pattern of stars', url: 'images/PDF programs/code-55.png' },
+
             ],
-            
+
             // Question Bank
             'basic-c/question-bank': [
                 // Add more question bank images here
             ],
-            
+
             // Data Structures
             'data-structures': [
                 // Add more data structures programs here
@@ -910,9 +1004,9 @@
             if (!query.trim()) {
                 return [];
             }
-            
+
             const searchTerm = query.toLowerCase();
-            return allPrograms.filter(program => 
+            return allPrograms.filter(program =>
                 program.title.toLowerCase().includes(searchTerm)
             );
         }
@@ -992,7 +1086,7 @@
         // Breadcrumb
         function getBreadcrumb() {
             const crumbs = [{ label: 'Home', page: 'home' }];
-            
+
             if (currentFolder) {
                 const parts = currentFolder.split('/');
                 if (parts[0] === 'basic-c') {
@@ -1017,7 +1111,7 @@
                     crumbs.push({ label: 'Data Structures', page: 'images', folder: 'data-structures' });
                 }
             }
-            
+
             return crumbs;
         }
 
@@ -1025,7 +1119,7 @@
         function render() {
             const app = document.getElementById('app');
             const breadcrumbs = getBreadcrumb();
-            
+
             let breadcrumbHTML = '<div class="breadcrumb">';
             breadcrumbs.forEach((crumb, index) => {
                 const isActive = index === breadcrumbs.length - 1;
@@ -1134,7 +1228,7 @@
                 const isLabFolder = currentFolder === 'basic-c/lab';
                 const title = isLabFolder ? 'Lab Programs' : 'Basic C Program';
                 const subtitle = isLabFolder ? 'Choose a day to view programs' : 'Choose a category to view programs';
-                
+
                 app.innerHTML = `
                     <header>
                         <h1>${title}</h1>
@@ -1144,21 +1238,21 @@
                     <a href="#" class="back-button" onclick="navigate('${isLabFolder ? 'folder' : 'home'}', '${isLabFolder ? 'basic-c' : ''}'); return false;">← Back</a>
                     <div class="folder-grid">
                         ${folderData.map(folder => {
-                            const shouldNavigateToImages = folder.hasSubfolders === false || folder.id.includes('day-');
-                            const navigatePage = shouldNavigateToImages ? 'images' : 'folder';
-                            return `
+                    const shouldNavigateToImages = folder.hasSubfolders === false || folder.id.includes('day-');
+                    const navigatePage = shouldNavigateToImages ? 'images' : 'folder';
+                    return `
                                 <div class="folder-card" onclick="navigate('${navigatePage}', '${folder.id}')">
                                     <div class="folder-icon">${folder.icon}</div>
                                     <div class="folder-title">${folder.title}</div>
                                     <div class="folder-description">${folder.description}</div>
                                 </div>
                             `;
-                        }).join('')}
+                }).join('')}
                     </div>
                 `;
             } else if (currentPage === 'images') {
                 const images = imageData[currentFolder] || [];
-                
+
                 // Determine title based on current folder
                 let title = 'Programs';
                 if (currentFolder === 'data-structures') {
@@ -1173,7 +1267,7 @@
                 } else if (currentFolder.includes('question-bank')) {
                     title = 'Question Bank';
                 }
-                
+
                 // Determine back navigation
                 let backFolder = '';
                 let backPage = 'home';
@@ -1184,7 +1278,7 @@
                     backFolder = currentFolder.split('/')[0];
                     backPage = 'folder';
                 }
-                
+
                 app.innerHTML = `
                     <header>
                         <h1>${title}</h1>
@@ -1208,7 +1302,7 @@
                         </div>
                     `}
                 `;
-                
+
                 currentImages = images;
             }
 
@@ -1289,4 +1383,5 @@
         render();
     </script>
 </body>
+
 </html>
