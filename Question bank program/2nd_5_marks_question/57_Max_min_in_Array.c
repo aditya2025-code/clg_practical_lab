@@ -1,4 +1,4 @@
-// Q34. Write a[n] C program to read an array of N elements and find max, min, sum, average.
+// 57. Write a C program to find maximum and minimum elements of an array.
 
 #include <stdio.h>
 
@@ -7,8 +7,7 @@ int main()
   int n;
   printf("Enter the array size: ");
   scanf("%d", &n);
-  int a[n], sum = 0;
-  float avg;
+  int a[n];
   printf("Enter the array element: ");
   for (int i = 0; i < n; i++)
   {
@@ -21,19 +20,15 @@ int main()
       max = a[i];
     if (min > a[i])
       min = a[i];
-    sum += a[i];
   }
-  avg = (float)sum / n;
-  printf("Maximum element = %d\nMinimum element = %d\nSum = %d\nAverage = %.2f", max, min, sum, avg);
+  printf("Maximum element = %d\nMinimum element = %d", max, min);
   return 0;
 }
 
 // OUTPUT:
 /*
 Enter the array size: 5
-Enter the array element: 80 90 80 70 71
+Enter the array element: 80 90 80 69 71
 Maximum element = 90
-Minimum element = 70
-Sum = 391
-Average = 78.20
+Minimum element = 69
 */
