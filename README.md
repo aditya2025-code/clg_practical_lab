@@ -44,25 +44,25 @@ Visit the interactive web version for easy browsing and searching:
 ```
 clg_practical_lab/
 │
-├── images/
-│   └── lab/
-│       ├── DAY_01/          # Basic programs and data types
-│       ├── DAY_02/          # Operators and arithmetic
-│       ├── DAY_03/          # Logical operations
-│       ├── DAY_04/          # Bitwise operations
-│       ├── DAY_05/          # Control structures
-│       ├── DAY_06/          # Coming soon...
-│       └── DAY_07/          # Coming soon...
+├── --LAB--/                     # Lab program organized by days
+│   ├── DAY_01/
+│   ├── DAY_02/
+│   ├── DAY_03/
+│   ├── DAY_04/
+│   ├── DAY_05/
+│   └── ...                      # More days added as you expand
 │
-├── code/                    # Source code files (.c)
-│   ├── day1/
-│   ├── day2/
-│   ├── day3/
-│   ├── day4/
-│   └── day5/
+├── PDF programs/                # Reference PDFs (program code)
 │
-├── index.html               # Main website file
-└── README.md                # This file
+├── Question bank program/       # Practice questions & solutions section
+│
+├── images/                     # Generic images used in the website
+│
+├── index.html                  # Main interactive website file
+├── README.md                   # Documentation & project overview
+├── .gitignore                  # Git ignore file
+└── LICENSE                    # Open source license
+
 ```
 
 ---
@@ -185,7 +185,7 @@ Contributions are welcome! If you'd like to add programs, fix errors, or improve
 
 **Created & Maintained by:** Aditya Das
 
-- 📧 **Email**: [Aditya Das](mailto:adi1020066002@gmail.com)
+- 📧 **Email**: [adi1020066002@gmail.com](mailto:adi1020066002@gmail.com)
 - 💼 **LinkedIn**: [Aditya Das](https://www.linkedin.com/in/aditya-das-031943380/)
 - 📘 **Facebook**: [Profile](https://www.facebook.com/profile.php?id=100053900320450)
 
@@ -241,7 +241,7 @@ This project is open source and available for educational purposes. Feel free to
 
 ## 🔄 Updates
 
-**Last Updated**: January 5, 2026
+**Last Updated**: January 16, 2026
 
 ### Recent Changes:
 - ✅ Added DAY-5 programs (Programs 15-23)
