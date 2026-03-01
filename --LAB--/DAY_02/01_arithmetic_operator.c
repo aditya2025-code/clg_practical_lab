@@ -21,14 +21,14 @@ int main()
 
   madule = a1 % b1;
 
-  printf("%f and %f addition is %.2f,  \n subtruction is %.2f,  \n multification is %.2f,  \n division is %.2f,  \n madule is %.2f \n", a, b, addi, sub, mul, divi, madule);
+  printf("%.2f and %.2f addition is %.2f,  \n subtruction is %.2f,  \n multification is %.2f,  \n division is %.2f,  \n madule is %.2f \n", a, b, addi, sub, mul, divi, madule);
   return 0;
 }
 //OUTPUT:
 /*
 Enter the frist number 55
 Enter the second number 66
-55.000000 and 66.000000 addition is 121.00,  
+55.00 and 66.00 addition is 121.00,  
  subtruction is -11.00,
  multification is 3630.00,
  division is 0.83,
